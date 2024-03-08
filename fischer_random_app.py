@@ -39,5 +39,8 @@ def fischer_random():
 st.title("Hey chess nerd, this is B's Fischer Randomizer", anchor="title")
 
 if st.button("Randomize"):
+    result=fischer_random()
     st.markdown("Set up the pieces like this:")
-    st.markdown(fischer_random())
+    for k, v in result.items():
+        markdown_string=k+" "+v
+        st.markdown(markdown_string)
